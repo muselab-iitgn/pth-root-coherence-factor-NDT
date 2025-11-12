@@ -8,7 +8,7 @@ __global__ void pthCoherenceKernel(double* d_BeamformData, const double* d_RData
     double RF_Start_Time, double fs,
     const double* d_BeamformX, const double* d_BeamformZ,
     const double* d_element_loc, double p,
-    int num_samples, int num_rx_elements, int nX, int nZ // same format as that of CPU code)
+    int num_samples, int num_rx_elements, int nX, int nZ) // same format as that of CPU code
 {
     // assigning a thread to each pixel
     int Xi = blockIdx.x * blockDim.x + threadIdx.x;
